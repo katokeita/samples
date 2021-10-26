@@ -1,5 +1,4 @@
 ---
-layout: default
 title: トップページ
 version: 0.1.0
 author: Exastro developer
