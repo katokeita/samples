@@ -7,11 +7,32 @@ date: 2021/10/15
 lastmod: 2021/10/31
 ---
 
-<section>
-# トップページです
+## h2
+### h3
+#### h4
+##### h5
+###### h6
 
-* hoge
-* huga
+**これは太字のテキストです**
+*このテキストは斜体です*
+~~これは間違ったテキストでした~~
 
-'''
-</section>
+>test
+
+- George Washington
+- John Adams
+- Thomas Jefferson
+
+1. James Madison
+2. James Monroe
+3. John Quincy Adams
+
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
+```
+git status
+git add
+git commit
+```
