@@ -25,7 +25,45 @@
 
 
 <main id="main">
-{{content}}
+<article id="article">
+    <header class="article-header">
+        <h1>
+          <span class="article-header-logo"><img src="./asset/img/Exastro-EPOCH-logo1-rgb.svg" alt="Exastro EPOCH"></span>
+          {{ page.title }}
+        </h1>
+        <div class="article-header-info">
+          <ul class="article-header-info-list">
+            <li class="article-header-info-item">
+              <dl class="article-header-info-card">
+                <dt class="article-header-info-title">Version</dt>
+                <dd class="article-header-info-body">{{ page.version }}</dd>
+              </dl>
+            </li>
+            <li class="article-header-info-item">
+              <dl class="article-header-info-card">
+                <dt class="article-header-info-title">Author</dt>
+                <dd class="article-header-info-body">{{ page.author }}</dd>
+              </dl>
+            </li>
+            <li class="article-header-info-item">
+              <dl class="article-header-info-card">
+                <dt class="article-header-info-title">Release date</dt>
+                <dd class="article-header-info-body">{{ page.date }}</dd>
+              </dl>
+            </li>
+            <li class="article-header-info-item">
+              <dl class="article-header-info-card">
+                <dt class="article-header-info-title">Last modified</dt>
+                <dd class="article-header-info-body">{{ page.lastmod }}</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <section class="article-section">
+{{ content }}
+    </section>
+  </article>
 </main>
 
 <footer id="footer">
