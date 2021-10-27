@@ -45,6 +45,10 @@ git add
 git commit
 ```
 
+<p class="info">**ポイント** ちょっとした情報です。</p>
+<p class="warn">**注意** 気をつけてください</p>
+<p class="alert">**警告** 細心の注意を払ってください</p>
+
 <table>
 <thead><tr><th>aaa</th></tr></thead>
 <tbody<tr><th>bbb</th></tr></tbody>
