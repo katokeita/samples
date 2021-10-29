@@ -1,2 +1,2 @@
 className test
-{:info aa}aa
+{:info}aa
