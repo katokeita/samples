@@ -1,11 +1,7 @@
 # Markdown settings
 kramdown:
-  syntax_highlighter: rouge
+  syntax_highlighter: coderay
   syntax_highlighter_opts:
-    block:
-      line_numbers: true
-  coderay:
-    coderay_line_number_start: 10
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style
+    line_numbers: table
+    bold_every: 5
+  coderay_line_number_start: 5
