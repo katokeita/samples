@@ -26,3 +26,12 @@ className test
 </div>
 
 <label><span>*Title H4*</span>{: .test-class}</label>
+
+{::options parse_block_html="false" /}
+<div>
+# Headline2
+------------
+</div>
+
+ああああああああああ
+{: .info}
