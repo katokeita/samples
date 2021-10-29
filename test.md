@@ -1,8 +1,7 @@
 className test
-{:info}
 
 
-
+{::options coderay_line_number_start="10" /}
 ```html
 <ul>
   <li>{{ site.time }}</li>

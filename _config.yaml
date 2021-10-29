@@ -1,4 +1,7 @@
 # Markdown settings
 kramdown:
-  coderay:
-    coderay_line_number_start: 5
+  syntax_highlighter: coderay
+  syntax_highlighter_opts:
+    line_numbers: table
+    bold_every: 5
+  coderay_line_number_start: 5
