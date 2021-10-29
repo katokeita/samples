@@ -1,5 +1,9 @@
 # Markdown settings
 kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
   coderay:
     coderay_wrap:              div
     coderay_line_numbers:      inline

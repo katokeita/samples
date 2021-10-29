@@ -4,16 +4,18 @@ className test
 
 
 ```html
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
+<ul>
+  <li>{{ site.time }}</li>
+  <li>{{ page.url }}</li>
+  <li>{{ page.date }}</li>
+  <li>{{ page.id }}</li>
+  <li>{{ page.categories }}</li>
+  <li>{{ page.collection }}</li>
+  <li>{{ page.tags }}</li>
+  <li>{{ page.dir }}</li>
+  <li>{{ page.name }}</li>
+  <li>{{ page.path }}</li>
+  <li>{{ page.next }}</li>
+  <li>{{ page.previous }}</li>
+</ul>
 ```
