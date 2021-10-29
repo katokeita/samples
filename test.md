@@ -1,7 +1,7 @@
 className test
 
 
-{::options coderay_line_number_start="10" /}
+{::options coderay_line_number_start=10 /}
 ```html
 <ul>
   <li>{{ site.time }}</li>
@@ -18,3 +18,9 @@ className test
   <li>{{ page.previous }}</li>
 </ul>
 ```
+
+{::options parse_block_html="true" /}
+<div>
+# Headline2
+------------
+</div>
