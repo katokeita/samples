@@ -1,2 +1,4 @@
 # Markdown settings
 kramdown:
+  coderay:
+    coderay_line_number_start: 5
