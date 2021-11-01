@@ -35,7 +35,7 @@ className test
   <li>{{ page.previous }}</li>
 </ul>
 ~~~~
-{: .info .info32}
+{: .num .num126}
 
 {::options parse_block_html="true" /}
 <div>

@@ -7,27 +7,29 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
 
+
+<script>
+$(function(){
+  $('.num').each(function(){
+    const $code = $( this ),
+          numClass = $code.attr('class').split(' ').filter(function(v){return v.match(/^num[0-9]+$/);}),
+          startNum = ( numClass.length === 0 )? 1: Number( numClass[0].slice(3) ),
+          rowLength = $code.text().match(/\r?\n/g).length;
+    let html = '<div class="linemarker">';
+    for ( let i = 0; i < rowLength; i++ ) {
+      html += ( startNum + i ) + '<br>';
+    }
+    html += '</div>'
+    $code.prepend( html );
+  });
+});
+</script>
+
 </head>
 
 <body>
 
 {{ content }}
-
-
-<ul>
-<li>{{ site.time }}</li>
-<li>{{ page.url }}</li>
-<li>{{ page.date }}</li>
-<li>{{ page.id }}</li>
-<li>{{ page.categories }}</li>
-<li>{{ page.collection }}</li>
-<li>{{ page.tags }}</li>
-<li>{{ page.dir }}</li>
-<li>{{ page.name }}</li>
-<li>{{ page.path }}</li>
-<li>{{ page.next }}</li>
-<li>{{ page.previous }}</li>
-</ul>
 
 </body>
 </html>
