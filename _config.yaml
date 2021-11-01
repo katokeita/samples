@@ -1,5 +1,5 @@
 # Markdown settings
 markdown: kramdown
 kramdown:
-  use_coderay: true
-  coderay_line_numbers: table
+  math_engine: mathjax
+  syntax_highlighter: rouge

@@ -35,6 +35,7 @@ className test
   <li>{{ page.previous }}</li>
 </ul>
 ~~~~
+{: .info}
 
 {::options parse_block_html="true" /}
 <div>
