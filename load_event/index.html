@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ページ表示時のイベントの順番</title>
+</head>
+
+<body>
+
+<h1>ページ表示時のイベントの順番</h1>
+
+<ul>
+  <li>DOMContentLoaded</li>
+  <li>load</li>
+  <li>onpageshow</li>
+  <li>readystatechange</li>
+</ul>
+
+<textarea style="width: 640px; height: 320px; font-size: 20px;line-height: 2em; padding: 16px;"></textarea>
+
+<script>
+const log = document.querySelector('textarea');
+
+window.addEventListener('DOMContentLoaded', () => {
+  log.textContent = log.textContent + 'DOMContentLoaded\n';
+});
+
+window.addEventListener('load', () => {
+  log.textContent = log.textContent + 'load\n';
+});
+
+window.addEventListener('onpageshow', () => {
+  log.textContent = log.textContent + 'onpageshow\n';
+});
+
+window.addEventListener('readystatechange', () => {
+  log.textContent = log.textContent + document.readyState + '\n';
+});
+</script>
+
+</body>
+</html>
