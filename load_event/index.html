@@ -35,22 +35,27 @@ window.addEventListener('pageshow', (e) => {
   // ページをキャッシュから読み込んだか、直接読み込んだかを返す
   const cache = event.persisted ? "cache" : "not cache";
   log.textContent = log.textContent + 'pageshow(' + cache + ')\n';
+  console.log( 'pageshow(' + cache + ')t );
 });
 
 document.addEventListener('DOMContentLoaded', () => {
   log.textContent = log.textContent + 'DOMContentLoaded\n';
+  console.log('DOMContentLoaded');
 });
 
 window.addEventListener('load', () => {
   log.textContent = log.textContent + 'window load\n';
+  console.log('window load');
 });
 
 img.addEventListener('load', () => {
   log.textContent = log.textContent + 'img load\n';
+  console.log('img load');
 });
 
 document.addEventListener('readystatechange', () => {
   log.textContent = log.textContent + 'readystatechange : ' + document.readyState + '\n';
+  console.log( 'readystatechange : ' + document.readyState );
 });
 </script>
 
