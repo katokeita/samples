@@ -24,6 +24,7 @@
 
 <img style="width: 320px; height: auto;" src="img.jpg" alt="画像">
 
+<p><a href="/samples/">HOME</a></p>
 
 <script>
 const log = document.querySelector('textarea');
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
+  alert('load');
   log.textContent = log.textContent + 'window load\n';
   console.log('window load');
 });
