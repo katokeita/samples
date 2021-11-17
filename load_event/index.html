@@ -35,7 +35,7 @@ window.addEventListener('pageshow', (e) => {
   // ページをキャッシュから読み込んだか、直接読み込んだかを返す
   const cache = event.persisted ? "cache" : "not cache";
   log.textContent = log.textContent + 'pageshow(' + cache + ')\n';
-  console.log( 'pageshow(' + cache + ')t );
+  console.log( 'pageshow(' + cache + ')' );
 });
 
 document.addEventListener('DOMContentLoaded', () => {
