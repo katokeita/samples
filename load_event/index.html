@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>ページ表示時のイベントの順番</title>
+
 </head>
 
 <body>
@@ -18,10 +19,13 @@
 
 <textarea style="width: 640px; height: 320px; font-size: 20px;line-height: 2em; padding: 16px;"></textarea>
 
+<img style="width: 320px; height: auto;" src="img.jpg" alt="画像">
+
+
 <script>
 const log = document.querySelector('textarea');
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   log.textContent = log.textContent + 'DOMContentLoaded\n';
 });
 
@@ -29,12 +33,12 @@ window.addEventListener('load', () => {
   log.textContent = log.textContent + 'load\n';
 });
 
-window.addEventListener('onpageshow', () => {
-  log.textContent = log.textContent + 'onpageshow\n';
+document.addEventListener('pageshow', () => {
+  log.textContent = log.textContent + 'pageshow\n';
 });
 
-window.addEventListener('readystatechange', () => {
-  log.textContent = log.textContent + document.readyState + '\n';
+document.addEventListener('readystatechange', () => {
+  log.textContent = log.textContent + 'readystatechange : ' + document.readyState + '\n';
 });
 </script>
 
