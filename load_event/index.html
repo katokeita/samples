@@ -25,16 +25,22 @@
 <script>
 const log = document.querySelector('textarea');
 
+window.addEventListener('pageshow', (e) => {
+  // ページをキャッシュから読み込んだか、直接読み込んだかを返す
+  const cache = event.persisted ? "cache" : "not cache";
+  log.textContent = log.textContent + 'pageshow(' + cache + ')\n';
+});
+
+window.addEventListener('pageshow', () => {
+  log.textContent = log.textContent + 'pageshow\n';
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   log.textContent = log.textContent + 'DOMContentLoaded\n';
 });
 
 window.addEventListener('load', () => {
   log.textContent = log.textContent + 'load\n';
-});
-
-document.addEventListener('pageshow', () => {
-  log.textContent = log.textContent + 'pageshow\n';
 });
 
 document.addEventListener('readystatechange', () => {
