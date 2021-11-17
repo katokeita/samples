@@ -10,12 +10,32 @@
 
 <h1>ページ表示時のイベントの順番</h1>
 
-<ul>
-  <li>DOMContentLoaded</li>
-  <li>load</li>
-  <li>onpageshow</li>
-  <li>readystatechange</li>
-</ul>
+<table>
+<tr>
+  <th><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/DOMContentLoaded_event">Window: DOMContentLoaded</a></th>
+  <td></td>
+</tr>
+<tr>
+  <th><a href="https://developer.mozilla.org/ja/docs/Web/API/Document/DOMContentLoaded_event">Document: DOMContentLoaded</a></th>
+  <td></td>
+</tr>
+<tr>
+  <th><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/load_event">Window: load</a></th>
+  <td></td>
+</tr>
+<tr>
+  <th><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/pageshow_event">Window: pageshow</a></th>
+  <td></td>
+</tr>
+<tr>
+  <th><a href="https://developer.mozilla.org/ja/docs/Web/API/WindowEventHandlers/onpopstate">WindowEventHandlers.onpopstate</a></th>
+  <td></td>
+</tr>
+<tr>
+  <th><a href="https://developer.mozilla.org/ja/docs/Web/API/Document/readystatechange_event">Document: readystatechange</a></th>
+  <td></td>
+</tr>
+</table>
 
 <textarea style="width: 640px; height: 320px; font-size: 20px;line-height: 2em; padding: 16px;"></textarea>
 
@@ -33,29 +53,44 @@ const img = document.querySelector('img');
 log.textContent = '';
 
 window.addEventListener('pageshow', (e) => {
-  // ページをキャッシュから読み込んだか、直接読み込んだかを返す
+  alert('pageshow');
   const cache = event.persisted ? "cache" : "not cache";
   log.textContent = log.textContent + 'pageshow(' + cache + ')\n';
   console.log( 'pageshow(' + cache + ')' );
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  log.textContent = log.textContent + 'DOMContentLoaded\n';
-  console.log('DOMContentLoaded');
+document.addEventListener('document DOMContentLoaded', () => {
+  alert('document DOMContentLoaded');
+  log.textContent = log.textContent + 'document DOMContentLoaded\n';
+  console.log('document DOMContentLoaded');
 });
 
+window.addEventListener('window DOMContentLoaded', () => {
+  alert('window DOMContentLoaded');
+  log.textContent = log.textContent + 'window DOMContentLoaded\n';
+  console.log('window DOMContentLoaded');
+});
+
+window.onpopstate = function() {
+  alert('popstate');
+  log.textContent = log.textContent + 'popstate\n';
+  console.log('popstate');
+};
+
 window.addEventListener('load', () => {
-  alert('load');
+  alert('window load');
   log.textContent = log.textContent + 'window load\n';
   console.log('window load');
 });
 
 img.addEventListener('load', () => {
+  alert('img load');
   log.textContent = log.textContent + 'img load\n';
   console.log('img load');
 });
 
 document.addEventListener('readystatechange', () => {
+  alert( 'readystatechange : ' + document.readyState );
   log.textContent = log.textContent + 'readystatechange : ' + document.readyState + '\n';
   console.log( 'readystatechange : ' + document.readyState );
 });
