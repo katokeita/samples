@@ -53,19 +53,19 @@ const img = document.querySelector('img');
 log.textContent = '';
 
 window.addEventListener('pageshow', (e) => {
-  alert('pageshow');
   const cache = event.persisted ? "cache" : "not cache";
+  alert('pageshow(' + cache + ')' );
   log.textContent = log.textContent + 'pageshow(' + cache + ')\n';
   console.log( 'pageshow(' + cache + ')' );
 });
 
-document.addEventListener('document DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   alert('document DOMContentLoaded');
   log.textContent = log.textContent + 'document DOMContentLoaded\n';
   console.log('document DOMContentLoaded');
 });
 
-window.addEventListener('window DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
   alert('window DOMContentLoaded');
   log.textContent = log.textContent + 'window DOMContentLoaded\n';
   console.log('window DOMContentLoaded');
