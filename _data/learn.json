@@ -18,7 +18,17 @@
      "url": "#",
      "documents": [
         {
-          "title": "クイックスタート",
+          "title": "Quick start",
+          "anker": "#",
+          "url": "install.html"
+        },
+        {
+          "title": "BASE",
+          "anker": "#",
+          "url": "install.html"
+        },
+        {
+          "title": "AAA",
           "anker": "#",
           "url": "install.html"
         }
