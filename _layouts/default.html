@@ -8,26 +8,14 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
 
 
-<script>
-$(function(){
-  $('.num').each(function(){
-    const $code = $( this ),
-          numClass = $code.attr('class').split(' ').filter(function(v){return v.match(/^num[0-9]+$/);}),
-          startNum = ( numClass.length === 0 )? 1: Number( numClass[0].slice(3) ),
-          rowLength = $code.text().match(/\r?\n/g).length;
-    let html = '<div class="linemarker">';
-    for ( let i = 0; i < rowLength; i++ ) {
-      html += ( startNum + i ) + '<br>';
-    }
-    html += '</div>'
-    $code.prepend( html );
-  });
-});
-</script>
 
 </head>
 
 <body>
+
+
+
+{% include navi_learn.html %}
 
 {{ content }}
 
