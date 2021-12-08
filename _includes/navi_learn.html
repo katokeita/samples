@@ -1,11 +1,11 @@
-aaaaaaaaaa
+
 <nav id="article-navi">
     <div class="article-navi-search">
         <div style="border:1px solid #1F8C78;border-radius: 16px; height: 32px;background-color: #FFF; line-height: 32px; padding-left: 16px; font-size: 16px; color: #AAA;"><i class="fas fa-search"></i> Googleカスタム検索</div>
     </div>
     <div class="article-navi-menu">
         <ul class="article-navi-list">
-{% for learn in site.data.learn.json %}
+{% for learn in site.data.learn %}
             <li class="article-navi-item">
                 <a class="article-navi-contents-link touch anker" href="{{ learn.anker }}">
                     <i class="fas fa-download"></i>{{ learn.title }}
