@@ -6,7 +6,7 @@
         <ul class="article-navi-list">
 {% for learn in site.data.learn.learn %}
             <li class="article-navi-item">
-    {% page.type == "index" %}
+    {% if page.type == "index" %}
                 <a class="article-navi-contents-link touch anker" href="#{{ learn.id }}">
     {% else %}
                 <a class="article-navi-contents-link touch" href="../{{ learn.anker }}">        
@@ -16,7 +16,7 @@
                 <ul class="article-navi-contents-list">
     {% for document in learn.documents %}
                     <li class="article-navi-contents-item">
-        {% page.type == "index" %}
+        {% if page.type == "index" %}
                         <a class="article-navi-contents-link touch anker" href="#{{ document.id }}">
         {% else %}
                         <a class="article-navi-contents-link touch" href="{{ document.anker }}">
