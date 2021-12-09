@@ -1,38 +1,31 @@
 {
-  "learn": [
-    {
-     "title": "導入手順",
-     "anker": "#",
-     "url": "#",
-     "documents": [
+    "learn": [
         {
-          "title": "インストール",
-          "anker": "#",
-          "url": "install.html"
-        }
-      ]
-    },
-    {
-     "title": "操作手順",
-     "anker": "#",
-     "url": "#",
-     "documents": [
-        {
-          "title": "Quick start",
-          "anker": "#",
-          "url": "install.html"
+            "id": "installationProcedure",
+            "title": "導入手順",
+            "documents": [
+                {
+                    "id": "install",
+                    "title": "インストール",
+                    "url": "install.html"
+                }
+            ]
         },
         {
-          "title": "BASE",
-          "anker": "#",
-          "url": "install.html"
-        },
-        {
-          "title": "AAA",
-          "anker": "#",
-          "url": "install.html"
+            "id": "operatingProcedure",
+            "title": "操作手順",
+            "documents": [
+                {
+                    "id": "quickStart",
+                    "title": "Quick start",
+                    "url": "install.html"
+                },
+                {
+                    "id": "base",
+                    "title": "BASE",
+                    "url": "install.html"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
