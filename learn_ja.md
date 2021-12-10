@@ -21,6 +21,9 @@ data: data
 {% assign note = site.data.learn.learn | where: "id", "installationProcedure" | first %}
 {{ note.title }}
 
+{% assign note2 = site.data.learn.learn | find: "id", "installationProcedure" %}
+{{ note2.title }}
+
 {% include navi_learn.html %}
 
 {% for learn in site.data.learn.learn %}
