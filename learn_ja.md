@@ -12,7 +12,7 @@ data: data
 
 
 
-{% assign aaaa = site.html_pages %}
+{% assign aaaa = site.html_pages | where: "name", 'test.md' %}
 {% for pageTest in aaaa }} %}
     <div>{{ pageTest.path }}</div>
     <div>{{ pageTest.modified_time }}</div>
