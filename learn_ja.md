@@ -16,7 +16,7 @@
                 </div>
                 <div class="content-footer">
                     <ul class="content-link-list">
-                    {% for link in learn.documents.links %}
+                    {% for link in documents.links %}
                         <li class="content-link-item">
                             <a class="content-link" href="{{ link.url }}">
                                 {{ link.title }} <i class="fas fa-angle-right"></i>
