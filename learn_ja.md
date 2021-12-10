@@ -2,7 +2,16 @@
 layout: default
 lang: ja
 type: index
+data: data
 ---
+
+
+
+
+
+{% for learn in site.{{ data }}.learn.learn %}
+    <div>{{ learn.title }}</div>
+{% endfor %}
 
 {% include navi_learn.html %}
 
