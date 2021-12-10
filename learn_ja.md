@@ -15,6 +15,10 @@ data: data
 {% assign aaaa = site.html_pages | where: "lang", "ja" %}
 {% for pageTest in aaaa }} %}
     <div>{{ pageTest.path }}</div>
+    <div>{{ pageTest.modified_time }}</div>
+    <div>{{ pageTest.name }}</div>
+    <div>{{ pageTest.basename }}</div>
+    <div>{{ pageTest.extname }}</div>
 {% endfor %}
 
 
