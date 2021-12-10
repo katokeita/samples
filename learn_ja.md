@@ -10,18 +10,23 @@ data: data
 
 
 
-{% assign filename = "atest.md" %}
+{% assign filename = "test.md" %}
 {% assign target = site.html_pages | where: "name", filename %}
 {% if target[0].name %}
 <div>{{ filename }} は存在する</div>
+{% else %}
+<div>{{ filename }} は存在しない</div>
 {% endif %}
 
 
 
 
+{% assign note = site.data.learn.learn | where: "id", "install" %}
+{{ note.description }}
+
 {% include navi_learn.html %}
 
-{% for learn in test.learn %}
+{% for learn in site.data.learn.learn %}
 <section class="">
     <h2><i class="{{ learn.icon }}"></i> {{ learn.title }}</h2>
     <ul class="content-list">
