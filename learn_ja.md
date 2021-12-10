@@ -13,7 +13,13 @@ site.data.learn.learn
 {% endcapture %}
 <p>{{ dataLearn }}</p>
 
-{% for learn in ataLearn %}
+{% for learn in dataLearn }} %}
+<p>変数</p>
+    <div>{{ learn.title }}</div>
+{% endfor %}
+
+
+{% for learn in test.learn }} %}
   aaa{{ dataLearn }}
     <div>{{ learn.title }}</div>
 {% endfor %}
