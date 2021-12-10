@@ -11,8 +11,8 @@ data: data
 
 
 {% assign filename = "atest.md" %}
-
-{% if site.html_pages[0] | where: "name", filename %}
+{% assign target = site.html_pages | where: "name", filename %}
+{% if target[0].name %}
 <div>{{ filename }} は存在する</div>
 {% endif %}
 
