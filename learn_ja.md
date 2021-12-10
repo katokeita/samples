@@ -12,8 +12,7 @@ data: data
 
 
 
-{% assign aaaa = site.html_pages | where: "name", 'test.md' %}
-{% if aaaa[0].name %}
+{% if site.html_pages[0] | where: "name", 'test.md' %}
 <div>存在する</div>
 {% endif %}
 
