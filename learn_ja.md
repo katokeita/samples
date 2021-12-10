@@ -1,3 +1,11 @@
+---
+layout: default
+lang: ja
+type: index
+---
+
+{% include navi_learn.html %}
+
 {% for learn in site.data.learn.learn %}
 <section class="">
     <h2><i class="{{ learn.icon }}"></i> {{ learn.title }}</h2>
