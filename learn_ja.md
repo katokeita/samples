@@ -16,7 +16,7 @@ data: data
 {% for pageTest in aaaa }} %}
     <div>{{ pageTest.path }}</div>
     <div>{{ pageTest.modified_time }}</div>
-    <div>{{ pageTest.name | remove ".md"}}</div>
+    <div>{{ pageTest.name | remove: ".md"}}</div>
     <div>{{ pageTest.basename }}</div>
     <div>{{ pageTest.extname }}</div>
 {% endfor %}
