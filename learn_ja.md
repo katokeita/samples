@@ -6,10 +6,12 @@ data: data
 ---
 
 
+{% capture dataLearn %}
+site.{{ data }}.learn.learn
+{% endcapture %}
 
 
-
-{% for learn in site.{{ data }}.learn.learn %}
+{% for learn in {{ dataLearn }} %}
     <div>{{ learn.title }}</div>
 {% endfor %}
 
