@@ -10,16 +10,16 @@ data: data
 
 
 
-{% assign filename = "aaatest.md" %}
-{% assign target = site.html_pages | where: "name", filename %}
-{% if target[0].name %}
+{% assign filename = "test.md" %}
+{% assign target = site.html_pages | where: "name", filename | first %}
+{% if target.name %}
 <div>{{ filename }} は存在する</div>
 {% else %}
 <div>{{ filename }} は存在しない</div>
 {% endif %}
 
-{% assign note = site.data.learn.learn | where: "id", "install" | first %}
-{{ note.description }}
+{% assign note = site.data.learn.learn | where: "id", "installationProcedure" | first %}
+{{ note.title }}
 
 {% include navi_learn.html %}
 
