@@ -6,23 +6,19 @@ data: data
 ---
 
 
-{% assign test = site.data.learn %}
 
-{% capture dataLearn %}
-site.data.learn.learn
-{% endcapture %}
-<p>{{ dataLearn }}</p>
 
-{% for learn in dataLearn }} %}
-<p>変数</p>
-    <div>{{ learn.title }}</div>
+
+
+
+
+{% assign aaaa = site.html_pages | where: "lang", "ja" %}
+{% for pageTest in aaaa }} %}
+    <div>{{ pageTest.path }}</div>
 {% endfor %}
 
 
-{% for learn in test.learn }} %}
-  aaa{{ dataLearn }}
-    <div>{{ learn.title }}</div>
-{% endfor %}
+
 
 {% include navi_learn.html %}
 
