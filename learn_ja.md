@@ -10,7 +10,7 @@ data: data
 
 
 
-{% assign filename = "test.md" %}
+{% assign filename = "aaatest.md" %}
 {% assign target = site.html_pages | where: "name", filename %}
 {% if target[0].name %}
 <div>{{ filename }} は存在する</div>
@@ -21,7 +21,7 @@ data: data
 
 
 
-{% assign note = site.data.learn.learn | where: "id", "install" %}
+{% assign note = site.data.learn.learn | find: "id", "install" %}
 {{ note.description }}
 
 {% include navi_learn.html %}
