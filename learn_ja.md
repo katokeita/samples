@@ -13,13 +13,9 @@ data: data
 
 
 {% assign aaaa = site.html_pages | where: "name", 'test.md' %}
-{% for pageTest in aaaa }} %}
-    <div>{{ pageTest.path }}</div>
-    <div>{{ pageTest.modified_time }}</div>
-    <div>{{ pageTest.name | remove: ".md"}}</div>
-    <div>{{ pageTest.basename }}</div>
-    <div>{{ pageTest.extname }}</div>
-{% endfor %}
+{% if aaaa[0].name %}
+<div>存在する</div>
+{% endif %}
 
 
 
