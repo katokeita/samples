@@ -6,18 +6,21 @@ data: data
 ---
 
 
-{% capture dataLearn %}
-site.{{ data }}.learn.learn
-{% endcapture %}
+{% assign test = site.data.learn %}
 
+{% capture dataLearn %}
+site.data.learn.learn
+{% endcapture %}
+<p>{{ dataLearn }}</p>
 
 {% for learn in {{ dataLearn }} %}
+  aaa{{ dataLearn }}
     <div>{{ learn.title }}</div>
 {% endfor %}
 
 {% include navi_learn.html %}
 
-{% for learn in site.data.learn.learn %}
+{% for learn in test.learn %}
 <section class="">
     <h2><i class="{{ learn.icon }}"></i> {{ learn.title }}</h2>
     <ul class="content-list">
