@@ -10,10 +10,10 @@ data: data
 
 
 
+{% assign filename = "atest.md" %}
 
-
-{% if site.html_pages[0] | where: "name", 'test.md' %}
-<div>存在する</div>
+{% if site.html_pages[0] | where: "name", filename %}
+<div>{{ filename }} は存在する</div>
 {% endif %}
 
 
