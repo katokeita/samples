@@ -18,10 +18,7 @@ data: data
 <div>{{ filename }} は存在しない</div>
 {% endif %}
 
-
-
-
-{% assign note = site.data.learn.learn | find: "id", "install" %}
+{% assign note = site.data.learn.learn | where: "id", "install" | first %}
 {{ note.description }}
 
 {% include navi_learn.html %}
