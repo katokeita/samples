@@ -8,7 +8,7 @@
         <!-- Category -->
         <ul class="article-navi-list">
         {% for learn in list.learn %}
-            {% if page.id == "home" %}
+            {% if learn.id == "home" %}
                 {% if page.type != "index" %}
             <li class="article-navi-item">
                 <a class="article-navi-contents-link touch anker" href="{{ learn.url }}"><i class="{{ learn.icon }}"></i>{{ learn.title }}</a>
