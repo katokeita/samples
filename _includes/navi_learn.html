@@ -1,33 +1,35 @@
-<nav id="article-navi">
-    <div class="article-navi-search">
-        <div style="border:1px solid #1F8C78;border-radius: 16px; height: 32px;background-color: #FFF; line-height: 32px; padding-left: 16px; font-size: 16px; color: #AAA;"><i class="fas fa-search"></i> Googleカスタム検索</div>
-</div>
+{% if page.lang == "ja" %}
+    {% assign list = site.data.learn_ja %}
+{% else %}
+    {% assign list = site.data.learn_en %}
+{% endif %}
+<nav id="articleNavi">
     <div class="article-navi-menu">
         <ul class="article-navi-list">
-{% for learn in site.data.learn.learn %}
+        {% for learn in list.learn %}
             <li class="article-navi-item">
-    {% if page.type == "index" %}
+            {% if page.type == "index" %}
                 <a class="article-navi-contents-link touch anker" href="#{{ learn.id }}">
-    {% else %}
+            {% else %}
                 <a class="article-navi-contents-link touch" href="../{{ learn.anker }}">        
-    {% endif %}
-                    <i class="fas fa-download"></i>{{ learn.title }}
+            {% endif %}
+                    <i class="{{ learn.icon }}"></i>{{ learn.title }}
                 </a>
                 <ul class="article-navi-contents-list">
-    {% for document in learn.documents %}
+                {% for document in learn.documents %}
                     <li class="article-navi-contents-item">
-        {% if page.type == "index" %}
+                    {% if page.type == "index" %}
                         <a class="article-navi-contents-link touch anker" href="#{{ document.id }}">
-        {% else %}
+                    {% else %}
                         <a class="article-navi-contents-link touch" href="{{ document.anker }}">
-        {% endif %}
+                    {% endif %}
                             <i class="fas fa-arrow-right"></i>{{ document.title }}
                         </a>
                     </li>
-    {% endfor %}
+                {% endfor %}
                 </ul>
             </li>
-{% endfor %}
+        {% endfor %}
         </ul>
     </div>
 </nav>
