@@ -16,7 +16,7 @@
                 {% endif %}
             {% else %}
             <li class="article-navi-item">
-                <button class="article-navi-button"><i class="{{ learn.icon }}"></i>{{ learn.title }}</button>
+                <button class="article-navi-button"><i class="fas fa-arrow-bottom"></i><i class="{{ learn.icon }}"></i>{{ learn.title }}</button>
                 <!-- Documents -->
                 <ul class="article-navi-contents-list">
                 {% for document in learn.documents %}
@@ -26,7 +26,7 @@
                             <i class="fas fa-book"></i>{{ document.title }}
                         </a>
                     {% elsif document.links.size != 1 %}
-                        <button class="article-navi-button"><i class="fas fa-arrow-right"></i> {{ document.title }}</button>
+                        <button class="article-navi-button"><i class="fas fa-arrow-bottom"></i> {{ document.title }}</button>
                         <ul class="article-navi-contents-link-list">
                         {% for link in document.links %}
                             <li class="article-navi-contents-link-item">

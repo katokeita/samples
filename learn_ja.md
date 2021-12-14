@@ -24,7 +24,7 @@ data: data
 {% assign note2 = site.data.learn.learn | find: "id", "installationProcedure" %}
 {{ note2.title }}
 
-{% include navi_learn.html %}
+
 
 {% for learn in site.data.learn.learn %}
 <section class="">
@@ -56,6 +56,10 @@ data: data
             </div>
         </li>
     {% endfor %}
+    {% assign remainder = learn.documents.size | modulo: 2 %}
+    {% if remainder != 0 %}
+        <li class="content-item content-item-padding"></li>
+    {% endif %}
     </ul>
 </section>
 {% endfor %}
