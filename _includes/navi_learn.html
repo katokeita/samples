@@ -8,10 +8,14 @@
         <!-- Category -->
         <ul class="article-navi-list">
         {% for learn in list.learn %}
+            {% if page.id == "home" %}
+                {% if page.type != "index" %}
             <li class="article-navi-item">
-            {% if page.id == "home" and page.type != "index" %}
                 <a class="article-navi-contents-link touch anker" href="{{ learn.url }}"><i class="{{ learn.icon }}"></i>{{ learn.title }}</a>
+            </li>
+                {% endif %}
             {% else %}
+            <li class="article-navi-item">
                 <button class="article-navi-button"><i class="{{ learn.icon }}"></i>{{ learn.title }}</button>
                 <!-- Documents -->
                 <ul class="article-navi-contents-list">
@@ -40,8 +44,8 @@
                     </li>
                 {% endfor %}
                 </ul>
+              </li>
             {% endif %}
-            </li>
         {% endfor %}
         </ul>
     </div>
