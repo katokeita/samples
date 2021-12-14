@@ -30,14 +30,14 @@
                         <ul class="article-navi-contents-link-list">
                         {% for link in document.links %}
                             <li class="article-navi-contents-link-item">
-                                <a class="article-navi-contents-link" href="{{ link.url }}">
+                                <a id="{{ link.id }}" class="article-navi-contents-link" href="{{ link.url }}">
                                     <i class="fas fa-book"></i> {{ link.title }}
                                 </a>
                             </li>
                         {% endfor %}
                         </ul>
                     {% else %}
-                        <a class="article-navi-contents-link" href="{{ document.links[0].url }}">
+                        <a id="{{ document.id }}" class="article-navi-contents-link" href="{{ document.links[0].url }}">
                             <i class="fas fa-book"></i> {{ document.title }}
                         </a>
                     {% endif %}

@@ -47,10 +47,12 @@
                     "links": [
                         {
                             "title": "座学編",
+                            "id": "base_tutorial",
                             "url": "base_tutorial.html"
                         },
                         {
                             "title": "実習編",
+                            "id": "base_practice",
                             "url": "base_practice.html"
                         }
                     ]
