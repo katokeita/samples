@@ -9,13 +9,10 @@
         <ul class="article-navi-list">
         {% for learn in list.learn %}
             <li class="article-navi-item">
-            {% if page.type == "index" %}
-                <a class="article-navi-contents-link touch anker" href="#{{ learn.id }}">
+            {% if page.id == "home" and page.type != "index" %}
+                <a class="article-navi-contents-link touch anker" href="{{ learn.url }}"><i class="{{ learn.icon }}"></i>{{ learn.title }}</a>
             {% else %}
-                <a class="article-navi-contents-link touch" href="../{{ learn.anker }}">        
-            {% endif %}
-                    <i class="{{ learn.icon }}"></i>{{ learn.title }}
-                </a>
+                <button class="article-navi-button"><i class="{{ learn.icon }}"></i>{{ learn.title }}</button>
                 <!-- Documents -->
                 <ul class="article-navi-contents-list">
                 {% for document in learn.documents %}
@@ -25,7 +22,7 @@
                             <i class="fas fa-book"></i>{{ document.title }}
                         </a>
                     {% elsif document.links.size != 1 %}
-                        <button class="article-navi-content-button"><i class="fas fa-arrow-right"></i> {{ document.title }}</button>
+                        <button class="article-navi-button"><i class="fas fa-arrow-right"></i> {{ document.title }}</button>
                         <ul class="article-navi-contents-link-list">
                         {% for link in document.links %}
                             <li class="article-navi-contents-link-item">
@@ -43,6 +40,7 @@
                     </li>
                 {% endfor %}
                 </ul>
+            {% endif %}
             </li>
         {% endfor %}
         </ul>
