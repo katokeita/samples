@@ -10,6 +10,7 @@ self.addEventListener('install', (event) => {
 // Service Worker アクティベート時に実行される
 self.addEventListener('activate', (event) => {
   console.info('activate', event);
+  console.log('activate');
 });
 
 self.addEventListener('fetch', (event) => {
