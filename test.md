@@ -7,6 +7,8 @@ className test
 
 <h1>{{ page.title }}</h1>
 
+<p>TEST</p>
+
 {::options coderay_line_number_start=10 /}
 ```html
 <ul>
