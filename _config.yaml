@@ -1,5 +1,2 @@
 # Markdown settings
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+remote_theme: katokeita/test-theme
